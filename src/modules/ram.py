@@ -1,8 +1,9 @@
-from display import Display
+from archey3 import Display
+from modules import module_register
 
 
 @module_register("ram")
-class RamDisplay(Display):
+class RamModule(Display):
     command_line = "free -m"
 
     def format_output(self, instring):

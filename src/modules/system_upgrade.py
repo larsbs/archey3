@@ -1,5 +1,11 @@
+from datetime import datetime
+
+from archey3 import Display
+from modules import module_register
+
+
 @module_register("system_upgrade")
-class systemUpgrade(display):
+class SystemUpgradeModule(Display):
 
     _upgrade_message = 'starting full system upgrade'
 
@@ -22,4 +28,4 @@ class systemUpgrade(display):
             updatetime = datetime.strptime(datestr, '%Y-%m-%d %H:%M')
             numdays = (currenttime - updatetime).days
             datestr = '{0} ({1} days ago)'.format(datestr, numdays)
-        return "Last Upgrade", datestr
+        return 'Last Upgrade', datestr

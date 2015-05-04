@@ -29,11 +29,10 @@ PROCESSES = None
 class Display(object):
     command_line = ''
     stdindata = ''
-    regex_class = re.compile("").__class__
+    regex_class = re.compile('').__class__
 
     def __init__(self, state, args=()):
         self.state = state
-        # Python3 unpacking is awesome
         self.arg1, self.arg2, self.arg3, *_ = tuple(args) + ('', '', '')
 
     @staticmethod
@@ -61,7 +60,7 @@ class Display(object):
                 self.process = subprocess.Popen(cmd.split(), stdin=subprocess.PIPE,
                                                 stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             except Exception:
-                self.state.logger.error("Could not run command {0}".format(cmd))
+                self.state.logger.error('Could not run command {0}'.format(cmd))
 
     def render(self):
         (stdoutdata, stderrdata) = self.process.communicate(self.stdindata or None)

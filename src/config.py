@@ -4,18 +4,6 @@ import configparser
 import collections
 
 
-UNAME_FLAG_MEANINGS = {
-    'a': 'System Infomation',
-    's': 'Kernel Name',
-    'n': 'Hostname',
-    'r': 'Kernel Release',
-    'v': 'Kernel Version',
-    'm': 'Machine Hardware name',
-    'p': 'Processor Type',
-    'i': 'Hardware Platform',
-}
-
-
 LOGOS = {
     'Arch Linux':
     '''
@@ -41,55 +29,6 @@ LOGOS = {
     \x1b[0m
     '''
 }
-
-
-DE_DICT = collections.OrderedDict(
-    [
-        ('cinnamon', 'Cinnamon'),
-        ('gnome-session', 'GNOME'),
-        ('ksmserver', 'KDE'),
-        ('mate-session', 'MATE'),
-        ('xfce4-session', 'Xfce'),
-        ('lxsession', 'LXDE'),
-        ('', 'None'),
-    ]
-)
-
-
-WM_DICT = collections.OrderedDict(
-    [
-        ('awesome', 'Awesome'),
-        ('beryl', 'Beryl'),
-        ('blackbox', 'Blackbox'),
-        ('bspwm', 'bspwm'),
-        ('dwm', 'DWM'),
-        ('enlightenment', 'Enlightenment'),
-        ('fluxbox', 'Fluxbox'),
-        ('fvwm', 'FVWM'),
-        ('herbstluftwm', 'herbstluftwm'),
-        ('i3', 'i3'),
-        ('icewm', 'IceWM'),
-        (re.compile('kwin(_x11|_wayland)?'), 'KWin'),
-        ('metacity', 'Metacity'),
-        ('musca', 'Musca'),
-        ('openbox', 'Openbox'),
-        ('pekwm', 'PekWM'),
-        ('ratpoison', 'ratpoison'),
-        ('scrotwm', 'ScrotWM'),
-        ('subtle', 'subtle'),
-        ('monsterwm', 'MonsterWM'),
-        ('wmaker', 'Window Maker'),
-        ('wmfs', 'Wmfs'),
-        ('wmii', 'wmii'),
-        ('xfwm4', 'Xfwm'),
-        ('emerald', 'Emerald'),
-        ('compiz', 'Compiz'),
-        (re.compile('xmonad-*'), 'xmonad'),
-        ('qtile', 'QTile'),
-        ('wingo', 'Wingo'),
-        ('', 'None'),
-    ]
-)
 
 
 COLORS = {
